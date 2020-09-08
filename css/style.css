@@ -3,3 +3,22 @@
   padding: 0;
   margin: 0;
 }
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+/* BACKGROUND GREEN E GREY */
+.backgreen{
+  color: inherit;
+  background-color: #009688;
+  height: 20vh;
+  z-index: -1;
+}
+.backgrey{
+  color: inherit;
+  background-color: #d8dbd5;
+  height: 80vh;
+  z-index: -1;
+}
+/*//  BACKGROUND GREEN E GREY */
