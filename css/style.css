@@ -3,10 +3,30 @@
   padding: 0;
   margin: 0;
 }
-
 body{
   height: 100vh;
   width: 100vw;
+}
+/* MIX */
+.bg-grey{
+  background-color: lightgrey;
+  color: inherit;
+}
+.bg-blue{
+  background-color: lightblue;
+  color: inherit;
+}
+.avatar{
+  height: 40px;
+  border-radius: 100%;
+
+}
+.icons{
+  background-color: inherit;
+  color: grey;
+  font-size: 20px;
+  padding: 10px;
+
 }
 /* BACKGROUND GREEN E GREY */
 .backgreen{
@@ -38,6 +58,7 @@ body{
   width: 40%;
   height: 100%;
   background-color: lightblue;
+  color: inherit;
 }
 .win-chat{
   width: 60%;
@@ -45,6 +66,14 @@ body{
   background-color: pink;
 }
 
-
+/* WIN-CONTACT */
+.sx-header{
+  height: 60px;
+  background-color: #eaeaea;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+/* WIN-CONTACT */
 
 /*// FINESTRA BOOLZAP */
