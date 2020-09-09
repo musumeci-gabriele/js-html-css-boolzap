@@ -180,7 +180,9 @@ body{
 /* WIN-CONTACT */
 
 /* NAV CHAT */
-
+.win-chat > .header{
+  border-left: 1px solid lightgrey;
+}
 .chat{
   background-image: url("../img/mine.jpg");
   height: calc(100% - 140px);
@@ -212,6 +214,8 @@ body{
   background-color: lightgreen;
   color:inherit;
 }
+
+/* FOOTER INPUT */
 .footer{
   display: flex;
   justify-content: space-between;
@@ -219,12 +223,23 @@ body{
   background-color: #EAEAEA;
   color:inherit;
   height: 70px;
-  padding: 15px 0;
+  padding: 20px;
 }
-.tamplate{
-  display: none;
+.footer-icon > i{
+  font-size: 28px;
+}
+.input-massage{
+  border: none;
+  border-radius: 5px;
+  width: 85%;
+  height: 40px;
+  padding: 10px;
 }
 .send-massage{
   cursor: auto;
+}
+/*// FOOTER INPUT */
+.tamplate{
+  display: none;
 }
 /*// FINESTRA BOOLZAP */
