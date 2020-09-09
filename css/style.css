@@ -6,6 +6,7 @@
 body{
   height: 100vh;
   width: 100vw;
+  font-size: 15px;
 }
 /* MIX */
 .bg-grey{
@@ -13,13 +14,27 @@ body{
   color: inherit;
 }
 .bg-blue{
-  background-color: lightblue;
+  background-color: #8edafc;
   color: inherit;
 }
+.blue-mod{
+  background-color: inherit;
+  color: #8edafc;
+}
+.bg-white{
+  background-color: white;
+  color:inherit;
+}
+.font-12{
+  font-size: 12px;
+  color: grey;
+  background-color: inherit;
+}
 .avatar{
-  height: 40px;
-  border-radius: 100%;
-
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
 }
 .icons{
   background-color: inherit;
@@ -28,6 +43,8 @@ body{
   padding: 10px;
 
 }
+
+.sent{}
 /* BACKGROUND GREEN E GREY */
 .backgreen{
   color: inherit;
@@ -45,35 +62,158 @@ body{
 
 /* FINESTRA BOOLZAP */
 .container{
-  width: 60vw;
+  width: 70vw;
   height: 90vh;
   position: absolute;
   top: 5vh;
   bottom: 5vh;
-  left: 20vw;
+  left: 15vw;
   display: flex;
   flex-wrap: wrap;
 }
 .win-contact{
   width: 40%;
   height: 100%;
-  background-color: lightblue;
+  background-color: white;
   color: inherit;
 }
 .win-chat{
   width: 60%;
   height: 100%;
-  background-color: pink;
 }
 
 /* WIN-CONTACT */
-.sx-header{
-  height: 60px;
-  background-color: #eaeaea;
-  padding: 10px;
+.header{
+  height: 70px;
+  background-color: #EAEAEA;
+  color: inherit;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.list-icons li{
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+}
+.notifiche{
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.icon-bell{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.bell{
+  font-size: 20px;
+  margin-left: 12px;
+  margin-top: 14px;
+}
+
+.notifiche-att{
+  list-style: none;
+  padding-top: 5px;
+
+}
+/* FIND CONTACT */
+.find-contact{
+  height: 50px;
+  background-color: #FAFAFA;
+  color: inherit;
+  text-align: center;
+  padding: 10px 0;
+}
+.search{
+  width: 85%;
+}
+.lente-ico{
+  width: 10%;
+}
+.search, .lente-ico{
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #FFFFFF;
+  color: grey;
+}
+/*// FIND CONTACT */
+.contacts{
+  height: calc(100% - 190px);
+  overflow-y: scroll;
+}
+.contact{
+  padding:10px;
+  display: flex;
+  align-items: center;
+}
+.contact .avatar{
+  width: 60px;
+  height: 60px;
+}
+.contact-text{
+  margin-left: 15px;
+}
+.contact-name{
+  margin-bottom: 8px;
+}
+.contact-time{
+  margin-left: auto;
+  align-items: flex-start;
+  margin-top: 5px;
 }
 /* WIN-CONTACT */
 
+/* NAV CHAT */
+.chat{
+  background-image: url("../img/mine.jpg");
+  height: calc(100% - 140px);
+  overflow-y: scroll;
+  padding:50px;
+}
+.massage-row{
+  margin: 10px 0;
+  display: flex;
+}
+.massage{
+  position: relative;
+  max-width: 350px;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: white;
+  color: inherit;
+}
+.massage-time{
+  position: absolute;
+  font-size: 13px;
+  bottom: 5px;
+  right: 5px;
+}
+.massage-row.sent{
+  justify-content: flex-end;
+}
+.massage-row.sent .massage{
+  background-color: lightgreen;
+  color:inherit;
+}
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EAEAEA;
+  color:inherit;
+  height: 70px;
+  padding: 15px 0;
+}
+.tamplate{
+  display: none;
+}
+.send-massage{
+  cursor: auto;
+}
 /*// FINESTRA BOOLZAP */

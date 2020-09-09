@@ -16,34 +16,136 @@
     <div class="container">
       <!-- NAV SX CONTATTI -->
       <div class="win-contact">
-        <div class="sx-header">
+
+        <!-- HEADER sx-->
+        <div class="header">
           <!-- IMG PROFILO -->
-          <div class="img-avatar">
+          <div>
             <img class="avatar" src="img/avatar_io.jpg" alt="avatar">
           </div>
           <!-- IMG PROFILO -->
           <!-- LINK MIX -->
-          <div class="link-avatar">
-            <span><i class="icons fas fa-circle-notch"></i></span>
-            <span><i class="icons fas fa-comment-alt"></i></span>
-            <span><i class="icons fas fa-ellipsis-v"></i></span>
+          <div >
+            <ul class="list-icons">
+              <li><i class="icons fas fa-circle-notch"></i></li>
+              <li><i class="icons fas fa-comment-alt"></i></li>
+              <li><i class="icons fas fa-ellipsis-v"></i></li>
+            </ul>
           </div>
           <!-- LINK MIX -->
         </div>
+        <!--// HEADER sx-->
+
+        <!-- NOTIFICHE -->
+        <div class="notifiche bg-blue">
+          <div class="icon-bell bg-white">
+            <i class="bell blue-mod fas fa-bell-slash"></i>
+          </div>
+          <div class="notifiche-att">
+            <h4>Ricevi notifiche di nuovi messaggi</h4>
+            <a class="font-12" href="#">Attiva notifiche descktop</a>
+          </div>
+        </div>
+        <!--// NOTIFICHE -->
+
+        <!-- FIND CONTACT -->
+        <div class="find-contact">
+          <span class="">
+            <i class="lente-ico font-12 fas fa-search"></i>
+          </span>
+          <span>
+              <input class="search font-12" type="text" name="find" placeholder="Cerca o inizia una nuova chat" value="">
+          </span>
+        </div>
+        <!--// FIND CONTACT -->
+
+        <!-- CONTACT LIST -->
+        <ul class="contacts">
+          <li class="contact">
+              <div class="">
+                <img src="avatar" alt="">
+              </div>
+              <div class="contact-text">
+                <h4 class="contact-name">nome</h4>
+                <p class="contact-lastmsg">litimo mex</p>
+              </div>
+              <div class="contact-time">17:30</div>
+          </li>
+
+        </ul>
+        <!-- CONTACT LIST -->
+
       </div>
       <!--// NAV SX CONTATTI -->
 
       <!-- NAV CHAT -->
       <div class="win-chat">
-        <div class="dx-header">
+        <!-- HEADER sx-->
+        <div class="header">
+          <!-- IMG PROFILO -->
+          <div>
+            <img class="avatar" src="img/avatar_io.jpg" alt="avatar">
+          </div>
+          <!-- IMG PROFILO -->
+          <!-- LINK MIX -->
+          <div >
+            <ul class="list-icons">
+              <li><i class="icons fas fa-circle-notch"></i></li>
+              <li><i class="icons fas fa-comment-alt"></i></li>
+              <li><i class="icons fas fa-ellipsis-v"></i></li>
+            </ul>
+          </div>
+          <!-- LINK MIX -->
+        </div>
+        <!--// HEADER sx-->
+
+        <!-- chat container -->
+        <div class="chat">
+          <div class="massage-row">
+            <div class="massage">
+              <div class="massage-text">Come stai?</div>
+              <div class="massage-time">17:40</div>
+            </div>
+
+            <div class="massage-row sent">
+              <div class="massage">
+                <div class="massage-text">Come stai?</div>
+                <div class="massage-time">17:40</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer">
+            <div class="footer-icon">
+              <i class="fas fa-smile" aria-hidden="true"></i>
+            </div>
+
+            <input id="input-massage" type="text" name="" value="" placeholder="scrivi un messaggio">
+
+            <div class="footer-icon">
+              <i class="send-massage fas fa-smile" aria-hidden="true"></i>
+            </div>
+          </div>
 
         </div>
+        <!--// NAV CHAT -->
+
+        <!-- TEMPLATE -->
+        <div class="tamplate">
+
+          <div class="massage-row">
+            <div class="massage">
+              <div class="massage-text"></div>
+              <div class="massage-time"></div>
+            </div>
+          </div>
+
+        </div>
+        <!-- TEMPLATE -->
       </div>
       <!--// NAV CHAT -->
     </div>
     <!--// FINESTRA BOOLZAP -->
-
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"> </script>
