@@ -40,11 +40,14 @@ body{
   background-color: inherit;
   color: grey;
   font-size: 20px;
-  padding: 10px;
+  padding: 6px;
+}
+.inline{
+  display: inline-block;
+}
+.sent{
 
 }
-
-.sent{}
 /* BACKGROUND GREEN E GREY */
 .backgreen{
   color: inherit;
@@ -143,6 +146,8 @@ body{
   color: grey;
 }
 /*// FIND CONTACT */
+
+/* CONTACT LIST */
 .contacts{
   height: calc(100% - 190px);
   overflow-y: scroll;
@@ -151,6 +156,11 @@ body{
   padding:10px;
   display: flex;
   align-items: center;
+  border-top: 1px solid lightgray;
+}
+.contact:hover{
+  background-color: #EBEBEB;
+  color:inherit;
 }
 .contact .avatar{
   width: 60px;
@@ -160,16 +170,17 @@ body{
   margin-left: 15px;
 }
 .contact-name{
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .contact-time{
   margin-left: auto;
   align-items: flex-start;
-  margin-top: 5px;
+  margin-bottom: 18px;
 }
 /* WIN-CONTACT */
 
 /* NAV CHAT */
+
 .chat{
   background-image: url("../img/mine.jpg");
   height: calc(100% - 140px);
