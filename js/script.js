@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 
 
-  // GENERAZIONE MESSAGGIO AUTOMATICO CON ORARIO DI INVIO
+  // GENERAZIONE MESSAGGIO CON ORARIO DI INVIO
   function sendMessage(){
     var inputText = $("#input-msg").val();
 
@@ -59,7 +59,7 @@ $(document).ready(function(){
   }
 
   // FUNZIONE RICERCA CON RILASCIO DEL TASTO DELLA TASTIERA
-  $("search").keyup(
+  $(".search").keyup(
     function(){
       var searchInput = $(this).val().toLowerCase();
       var contactsName = $(".contact .contact-name");
