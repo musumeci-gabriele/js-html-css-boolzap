@@ -1,24 +1,21 @@
 $(document).ready(function(){
 
-  // // GENERAZIONE MESSAGGIO AUTOMATICO
-  function sendMassage(){
-    var inputText = $("#input-massage").val();
+  // FUNZIONE OROLOGIO
+  function getTime(){
+    var d = new Date();
+    var m = d.getMinutes();
+    var h = d.getHours();
 
-    if (inputText != "") {
-      var templateMassage = $(".template .massage-row").clone();
-      templateMassage.find("massage-text").text(inputText);
-      templateMassage.find("massage-time").text("time");
-      templateMassage.addClass("sent");
-
-      $(".chat").append(templateMassage);
-      $("#input-message").val("");
+    if (m < 10) {
+      m = "0" + m;
     }
+  return h + ":" + m;
   }
 
   // EVENTO CLICK SUL TASTO MIC
-  $(".send-massage").click(
+  $(".send-message").click(
     function(){
-      sendMassage();
+      sendMessage();
     }
   );
 
@@ -26,27 +23,66 @@ $(document).ready(function(){
   $("#input-msg").keyup(
     function(event) {
       if (event.which ==13){
-        sendMassage();
+        sendMessage();
       }
     }
   );
 
-  //  OROLOGIO
-  function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
+  // FUNZIONE RICERCA CON RILASCIO DEL TASTO DELLA TASTIERA
+  $("search").keyup(
+    function(){
+      var searchInput = $(this).val().toLowerCase();
+      var contactsName = $(".contact .contact-name");
+      // per ogni elemento selezionato si fara' il controllo delle lettere digitate.
+      // Nascondera' i contact non corrispondenti
+      contactsName.each(
+        function(){
+          var name = $(this).text().toLowerCase();
+          // compare o scompare il blocco contattto
+          if (name.includes(searchInput) == true) {
+            $(this).parents(".contact").show();
+          }else {
+            $(this).parents(".contact").hide();
+          }
+        }
+      );
+
+
+    }
+  );
+
+  // GENERAZIONE MESSAGGIO AUTOMATICO CON ORARIO DI INVIO
+  function sendMessage(){
+    var inputText = $("#input-message").val();
+
+    if (inputText != "") {
+      var templateMassage = $(".template .message-row").clone();
+
+      var d = new Date();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      var time = h + ":" + m;
+
+      templateMessage.find("message-text").text(inputText);
+      templateMessage.find("message-time").text(getTime);
+      templateMessage.addClass("sent");
+
+      $(".chat").append(templateMessage);
+      setTimeout(cpuMessage, 1000);
+      $("#input-message").val("");
+    }
   }
 
-  var clock = document.getElementById('clock');
+  function cpuMessage(){
+    var cpuMassage = $(".template .message-row").clone();
 
-  function time() {
-    var d = new Date();
-    var m = d.getMinutes();
-    m = checkTime(m);
-    var h = d.getHours();
-    clock.textContent = (h + ":" + m);
+    cpuMessage.find(".message-text").text("ok");
+    cpuMessage.find(".message-time").text(getTime);
+
+    $(".chat").append(cpuMessage);
   }
 
-  setInterval(time, 1000);
-  console.log(clock);
+
+
+
 });
