@@ -28,6 +28,36 @@ $(document).ready(function(){
     }
   );
 
+
+
+  // GENERAZIONE MESSAGGIO AUTOMATICO CON ORARIO DI INVIO
+  function sendMessage(){
+    var inputText = $("#input-msg").val();
+
+    if (inputText != "") {
+      var templateMessage = $(".template .message-row").clone();
+
+
+      templateMessage.find(".message-text").text(inputText);
+      templateMessage.find(".message-time").text(getTime);
+      templateMessage.addClass("sent");
+
+      $(".chat").append(templateMessage);
+      setTimeout(cpuMessage, 1000);
+      $("#input-msg").val("");
+    }
+  }
+
+  // RISPOSTA AUTOMATICA CPU
+  function cpuMessage(){
+    var cpuMessage = $(".template .message-row").clone();
+
+    cpuMessage.find(".message-text").text("ok");
+    cpuMessage.find(".message-time").text(getTime);
+
+    $(".chat").append(cpuMessage);
+  }
+
   // FUNZIONE RICERCA CON RILASCIO DEL TASTO DELLA TASTIERA
   $("search").keyup(
     function(){
@@ -50,39 +80,6 @@ $(document).ready(function(){
 
     }
   );
-
-  // GENERAZIONE MESSAGGIO AUTOMATICO CON ORARIO DI INVIO
-  function sendMessage(){
-    var inputText = $("#input-message").val();
-
-    if (inputText != "") {
-      var templateMassage = $(".template .message-row").clone();
-
-      var d = new Date();
-      var m = d.getMinutes();
-      var h = d.getHours();
-      var time = h + ":" + m;
-
-      templateMessage.find("message-text").text(inputText);
-      templateMessage.find("message-time").text(getTime);
-      templateMessage.addClass("sent");
-
-      $(".chat").append(templateMessage);
-      setTimeout(cpuMessage, 1000);
-      $("#input-message").val("");
-    }
-  }
-
-  function cpuMessage(){
-    var cpuMassage = $(".template .message-row").clone();
-
-    cpuMessage.find(".message-text").text("ok");
-    cpuMessage.find(".message-time").text(getTime);
-
-    $(".chat").append(cpuMessage);
-  }
-
-
 
 
 });

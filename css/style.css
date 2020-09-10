@@ -45,7 +45,9 @@ body{
 .inline{
   display: inline-block;
 }
-
+.d-none{
+  display: none;
+}
 /* BACKGROUND GREEN E GREY */
 .backgreen{
   color: inherit;
@@ -188,7 +190,7 @@ body{
   padding: 50px;
 
 }
-.massage-row{
+.message-row{
   width: 100%;
   margin: 10px 0;
   display: flex;
@@ -196,7 +198,7 @@ body{
   align-items: flex-start;
 
 }
-.massage{
+.message{
   position: relative;
   max-width: 350px;
   border-radius: 10px;
@@ -205,17 +207,17 @@ body{
   color: inherit;
   word-break: break-all;
 }
-.massage-time{
+.message-time{
   position: absolute;
   font-size: 12px;
   bottom: 3px;
   right: 10px;
 }
-.sent{
+.message-row.sent{
   align-items: flex-end;
 }
 
-.massage-row.sent .massage{
+.message-row.sent .message{
   background-color: lightgreen;
   color:inherit;
 }
@@ -233,18 +235,21 @@ body{
 .footer-icon > i{
   font-size: 28px;
 }
-.input-massage{
+.input-message{
   border: none;
   border-radius: 5px;
   width: 85%;
   height: 40px;
   padding: 10px;
 }
-.send-massage{
-  cursor: auto;
+.send-message{
+  cursor: pointer;
+}
+.sent{
+
 }
 /*// FOOTER INPUT */
-.tamplate{
+.template{
   display: none;
 }
 /*// FINESTRA BOOLZAP */
