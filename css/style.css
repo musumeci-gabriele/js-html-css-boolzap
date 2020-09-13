@@ -122,7 +122,6 @@ body{
   margin-left: 12px;
   margin-top: 14px;
 }
-
 .notifiche-att{
   list-style: none;
 }
@@ -236,6 +235,8 @@ body{
   position: absolute;
   top: 15px;
   right: 8px;
+  background-color: white;
+  color: inherit;
   cursor: pointer;
 }
 .message-actions{
