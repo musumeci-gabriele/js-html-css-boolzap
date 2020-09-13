@@ -6,7 +6,8 @@
 body{
   height: 100vh;
   width: 100vw;
-  font-size: 15px;
+  font-size: 20px;;
+  font-family: 'Indie Flower', cursive;
 }
 /* MIX */
 .bg-grey{
@@ -25,8 +26,8 @@ body{
   background-color: white;
   color:inherit;
 }
-.font-12{
-  font-size: 12px;
+.font-15{
+  font-size: 15px;
   color: grey;
   background-color: inherit;
 }
@@ -45,8 +46,11 @@ body{
 .inline{
   display: inline-block;
 }
-.d-none{
+.d-none, .template{
   display: none;
+}
+.d-block{
+  display: block;
 }
 /* BACKGROUND GREEN E GREY */
 .backgreen{
@@ -121,8 +125,6 @@ body{
 
 .notifiche-att{
   list-style: none;
-  padding-top: 5px;
-
 }
 /* FIND CONTACT */
 .search-contact{
@@ -161,6 +163,7 @@ body{
 .contact:hover{
   background-color: #EBEBEB;
   color:inherit;
+  cursor: pointer;
 }
 .contact .avatar{
   width: 60px;
@@ -168,6 +171,10 @@ body{
 }
 .contact-text{
   margin-left: 15px;
+}
+.contact.d-block{
+  background-color: lightgreen;
+  color: inherit;
 }
 .contact-name{
   margin-bottom: 10px;
@@ -177,18 +184,28 @@ body{
   align-items: flex-start;
   margin-bottom: 18px;
 }
+.contact .d-block{
+  background-color: pink;
+  color: inherit;
+}
 /* WIN-CONTACT */
 
 /* NAV CHAT */
 .win-chat > .header{
   border-left: 1px solid lightgrey;
 }
+.chats-wrapper{
+  height: calc(100% - 140px);
+}
 .chat{
   background-image: url("../img/mine.jpg");
-  height: calc(100% - 140px);
+  height: 100%;
   overflow-y: scroll;
   padding: 50px;
-
+  display: none;
+}
+.chat.d-block{
+  display: block;
 }
 .message-row{
   width: 100%;
@@ -201,6 +218,7 @@ body{
 .message{
   position: relative;
   max-width: 350px;
+  min-width: 100px;
   border-radius: 10px;
   padding: 15px;
   background-color: white;
@@ -209,9 +227,29 @@ body{
 }
 .message-time{
   position: absolute;
-  font-size: 12px;
+  font-size: 15px;
   bottom: 3px;
   right: 10px;
+}
+.message-option{
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  cursor: pointer;
+}
+.message-actions{
+  display: none;
+  position: absolute;
+  top:100%;
+  left: 0;
+  padding: 10px;
+  max-width: 200px;
+  box-shadow: 2px 1px 10px #555;
+  white-space: nowrap;
+  list-style: none;
+  text-align: center;
+  z-index: 1;
 }
 .message-row.sent{
   align-items: flex-end;
@@ -221,7 +259,12 @@ body{
   background-color: lightgreen;
   color:inherit;
 }
-
+.message-row.sent .message .message-action{
+  right: 0;
+}
+.message:hover .message-option{
+  display: block;
+}
 /* FOOTER INPUT */
 .footer{
   display: flex;
@@ -245,11 +288,4 @@ body{
 .send-message{
   cursor: pointer;
 }
-.sent{
-
-}
 /*// FOOTER INPUT */
-.template{
-  display: none;
-}
-/*// FINESTRA BOOLZAP */
