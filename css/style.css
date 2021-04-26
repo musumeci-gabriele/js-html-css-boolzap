@@ -65,7 +65,6 @@ body{
   height: 80vh;
   z-index: -1;
 }
-/*//  BACKGROUND GREEN E GREY */
 
 /* FINESTRA BOOLZAP */
 .container{
@@ -146,7 +145,6 @@ body{
   background-color: #FFFFFF;
   color: grey;
 }
-/*// FIND CONTACT */
 
 /* CONTACT LIST */
 .contacts{
@@ -217,7 +215,7 @@ body{
 .message{
   position: relative;
   max-width: 350px;
-  min-width: 100px;
+  min-width: 150px;
   border-radius: 10px;
   padding: 15px;
   background-color: white;
@@ -230,28 +228,30 @@ body{
   bottom: 3px;
   right: 10px;
 }
-.message-option{
+.message-options{
   display: none;
-  position: absolute;
-  top: 15px;
-  right: 8px;
-  background-color: white;
   color: inherit;
   cursor: pointer;
 }
 .message-actions{
   display: none;
+  background-color: rgb(166, 218, 250);
   position: absolute;
-  top:100%;
-  left: 0;
+  top:60%;
+  left: 40px;
   padding: 10px;
   max-width: 200px;
+  border-radius: 10px;
   box-shadow: 2px 1px 10px #555;
   white-space: nowrap;
   list-style: none;
   text-align: center;
   z-index: 1;
 }
+.mes-dx{
+  transform: translateX(-130px);
+}
+
 .message-row.sent{
   align-items: flex-end;
 }
@@ -263,9 +263,7 @@ body{
 .message-row.sent .message .message-action{
   right: 0;
 }
-.message:hover .message-option{
-  display: block;
-}
+
 /* FOOTER INPUT */
 .footer{
   display: flex;
@@ -289,4 +287,3 @@ body{
 .send-message{
   cursor: pointer;
 }
-/*// FOOTER INPUT */

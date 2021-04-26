@@ -39,7 +39,6 @@ $(document).ready(function(){
     }
   );
 
-
   // EVENTO CLICK MENU A TENDINA con ON che carica la funzio al caricamento della pagina perche sono elementi dinamici
   $(document).on("click", ".message-options",
     function(){
@@ -75,8 +74,12 @@ $(document).ready(function(){
     }
   );
 
-
-
+  // Random Time  
+  var minuteRandom = Math.floor(Math.random()*60);
+  var hourRandom = Math.floor(Math.random()*25);
+  
+  $(".randomTime").append(hourRandom + ":" + minuteRandom);
+  
 });
 
 // GENERAZIONE MESSAGGIO CON ORARIO DI INVIO
@@ -89,6 +92,7 @@ function sendMessage(){
 
     templateMessage.find(".message-text").text(inputText);
     templateMessage.find(".message-time").text(time);
+    templateMessage.find(".message-actions").addClass("mes-dx");
     templateMessage.addClass("sent");
 
     $(".chat.d-block").append(templateMessage);
@@ -103,7 +107,8 @@ function sendMessage(){
 function cpuMessage(){
   var cpuMessage = $(".template .message-row").clone();
 
-  cpuMessage.find(".message-text").text("ok");
+  cpuMessage.find(".message-text").text("ok, ci vediamo...");
+
   var time = getTime();
   cpuMessage.find(".message-time").text(time);
 
@@ -112,14 +117,16 @@ function cpuMessage(){
   $(".chats-wrapper").scrollHeight(heightChatBlock);
 }
 
-  // FUNZIONE OROLOGIO
-  function getTime(){
-    var d = new Date();
-    var h = d.getHours();
-    var m = d.getMinutes();
+// FUNZIONE OROLOGIO
+function getTime(){
+  var d = new Date();
+  var h = d.getHours();
+  var m = d.getMinutes();
 
-    if (m < 10) {
-      m = "0" + m;
-    }
-  return h + ":" + m;
+  if (m < 10) {
+    m = "0" + m;
   }
+return h + ":" + m;
+}
+
+
